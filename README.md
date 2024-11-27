@@ -13,9 +13,11 @@ The Vehicle Rescue app is designed to assist users in locating nearby service po
 - Firebase for database
 -  Google Maps API (for location-based services)
 
-##Getting Statrted
-### The Prequisitiies
-API Keys: Obtain API Keys for Google maps.
+## Getting Started
+-Android Studio
+-API Keys: Obtain API Keys for Google maps.
+-Mobile Phone 
+
 
 ##Layout
 
