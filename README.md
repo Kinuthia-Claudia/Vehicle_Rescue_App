@@ -15,7 +15,7 @@ The Vehicle Rescue app is designed to assist users in locating nearby service po
 
 ##Getting Statrted
 ### The Prequisitiies
-API Keys: Obtain API Keys for Google maps
+API Keys: Obtain API Keys for Google maps.
 
 ##Layout
 
