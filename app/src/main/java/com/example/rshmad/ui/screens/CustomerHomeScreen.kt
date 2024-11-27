@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
@@ -49,11 +48,11 @@ fun CustomerHomeScreen(navController: NavHostController) {
         if (context.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             locationPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
         } else {
-            // If permission is already granted, get the location
+
             fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
                 location?.let {
                     currentLocation = LatLng(it.latitude, it.longitude)
-                    // Update camera position to user's location
+
                     cameraPositionState.position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(currentLocation!!, 15f)
                 } ?: run {
                     Toast.makeText(context, "Failed to get location", Toast.LENGTH_SHORT).show()
@@ -85,7 +84,7 @@ fun CustomerHomeScreen(navController: NavHostController) {
 
         // Alert Button
         Button(
-            onClick = { Toast.makeText(context, "Alert clicked", Toast.LENGTH_SHORT).show() },
+            onClick = { navController.navigate("servicesScreen") },
             modifier = Modifier.padding(16.dp)
         ) {
             Text(text = "Alert")
@@ -93,11 +92,13 @@ fun CustomerHomeScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Logout Button
         Button(
-            onClick = { navController.navigate("userTypeSelection") { popUpTo(0) } }
+            onClick = {
+                navController.navigate("profileScreen")
+            },
+            modifier = Modifier.padding(16.dp)
         ) {
-            Text(text = "Logout")
+            Text(text = "View Profile")
         }
     }
 }

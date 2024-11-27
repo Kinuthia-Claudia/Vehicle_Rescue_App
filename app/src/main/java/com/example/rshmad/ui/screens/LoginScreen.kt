@@ -29,25 +29,25 @@ fun LoginScreen(
     viewModel: AuthViewModel,
     userType: String
 ) {
-    // State for email and password inputs
+
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
 
-    // Collect the authentication state as a state object
+
     val authState = viewModel.authState.collectAsState().value
 
-    // FirebaseAuth instance for login
+
     val auth = FirebaseAuth.getInstance()
 
-    // Login logic
+
     fun loginUser() {
         auth.signInWithEmailAndPassword(email.value, password.value)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    // After login success, check the user type
+
                     val userId = auth.currentUser?.uid
                     if (userId != null) {
-                        // Get the user role from Firebase
+
                         FirebaseDatabase.getInstance().reference
                             .child("users")
                             .child(userId)
@@ -56,7 +56,7 @@ fun LoginScreen(
                                 if (dbTask.isSuccessful) {
                                     val userRole = dbTask.result?.child("role")?.value as? String
                                     if (userRole != null) {
-                                        // Navigate based on the role
+
                                         when (userRole) {
                                             "customer" -> navController.navigate("customerHome") {
                                                 popUpTo("userTypeSelection") { inclusive = true }
@@ -66,7 +66,7 @@ fun LoginScreen(
                                             }
                                         }
                                     } else {
-                                        // Role not found, show error
+
                                         Toast.makeText(
                                             navController.context,
                                             "Error: User role not found.",
@@ -74,7 +74,7 @@ fun LoginScreen(
                                         ).show()
                                     }
                                 } else {
-                                    // Database read error
+
                                     Toast.makeText(
                                         navController.context,
                                         "Error fetching user data.",
@@ -84,7 +84,7 @@ fun LoginScreen(
                             }
                     }
                 } else {
-                    // Login failed
+
                     Toast.makeText(
                         navController.context,
                         "Login failed: ${task.exception?.message}",
@@ -99,7 +99,7 @@ fun LoginScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Email input field
+
         TextField(
             value = email.value,
             onValueChange = { email.value = it },
@@ -107,7 +107,7 @@ fun LoginScreen(
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email)
         )
 
-        // Password input field
+
         TextField(
             value = password.value,
             onValueChange = { password.value = it },
@@ -116,19 +116,19 @@ fun LoginScreen(
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
         )
 
-        // Login button
+
         Button(onClick = {
-            loginUser() // Call the login function
+            loginUser()
         }) {
             Text(text = "Login as $userType")
         }
 
-        // UI state based on authentication state
+
         when (authState) {
             is AuthState.Loading -> CircularProgressIndicator()
             is AuthState.Error -> Text("Error: ${(authState as AuthState.Error).message}")
             is AuthState.Success -> {
-                // Do nothing, since login is handled by Firebase
+
             }
             else -> {}
         }

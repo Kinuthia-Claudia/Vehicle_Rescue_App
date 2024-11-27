@@ -15,13 +15,13 @@ class AuthViewModel : ViewModel() {
     private val _authState = MutableStateFlow<AuthState>(AuthState.Idle)
     val authState: StateFlow<AuthState> = _authState
 
-    // Registration function
+
     fun register(email: String, password: String, userType: String) {
         viewModelScope.launch {
             _authState.value = AuthState.Loading
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnSuccessListener { authResult ->
-                    // Save user type to Realtime Database
+
                     val userRef = database.child("users").child(authResult.user!!.uid)
                     val userData = mapOf("userType" to userType)
                     userRef.setValue(userData)
@@ -36,7 +36,7 @@ class AuthViewModel : ViewModel() {
         }
     }
 
-    // Login function
+
     fun login(email: String, password: String) {
         viewModelScope.launch {
             _authState.value = AuthState.Loading
@@ -50,10 +50,10 @@ class AuthViewModel : ViewModel() {
         }
     }
 
-    // Function to fetch the user type after login
+
     fun getUserType(onResult: (String) -> Unit) {
         val userId = auth.currentUser?.uid ?: return
-        // Fetch user type from Realtime Database
+
         val userRef = database.child("users").child(userId)
         userRef.get()
             .addOnSuccessListener { snapshot ->
