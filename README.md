@@ -9,13 +9,15 @@ The Vehicle Rescue app is designed to assist users in locating nearby service po
 - **Request Assistance:** Directly request assistance through the app.
 
 ## Technology Stack
--  Kotlin
+-  Kotlin and Jetpack Compose
 - Firebase for database
 -  Google Maps API (for location-based services)
 
 ## Getting Started
 -Android Studio
+
 -API Keys: Obtain API Keys for Google maps.
+
 -Mobile Phone 
 
 
