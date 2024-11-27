@@ -1,0 +1,180 @@
+{
+  "project_info": {
+    "project_number": "526395676105",
+    "firebase_url": "https://roadsideheroapp-default-rtdb.firebaseio.com",
+    "project_id": "roadsideheroapp",
+    "storage_bucket": "roadsideheroapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526395676105:android:75c0716d760ea1e6054418",
+        "android_client_info": {
+          "package_name": "com.bracketcove.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWX00AewmAo84SNqMpeXrYdEq_hxBVPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526395676105:android:83e8e0be9c71abb7054418",
+        "android_client_info": {
+          "package_name": "com.example.makeitso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWX00AewmAo84SNqMpeXrYdEq_hxBVPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526395676105:android:25c6c222b879a3e1054418",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526395676105-b450t0tq7d359t0hl09vnec9ljlq23no.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "8a8e7dd32da5aa146b65f5cc11e727c0e1dbccc8"
+          }
+        },
+        {
+          "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWX00AewmAo84SNqMpeXrYdEq_hxBVPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526395676105:android:75fb881b38566d95054418",
+        "android_client_info": {
+          "package_name": "com.example.roadsideheromad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526395676105-i5js2q7ttdq7bad4dr7vrf7lvh68jaoi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roadsideheromad",
+            "certificate_hash": "8a8e7dd32da5aa146b65f5cc11e727c0e1dbccc8"
+          }
+        },
+        {
+          "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWX00AewmAo84SNqMpeXrYdEq_hxBVPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526395676105:android:172abb9184ed8c45054418",
+        "android_client_info": {
+          "package_name": "com.example.rshmad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526395676105-fg0s33b99v9qare18c9fgrq619muvgpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rshmad",
+            "certificate_hash": "8a8e7dd32da5aa146b65f5cc11e727c0e1dbccc8"
+          }
+        },
+        {
+          "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWX00AewmAo84SNqMpeXrYdEq_hxBVPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526395676105-s7kk120rf92knbve6ntit4e19d752rg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
